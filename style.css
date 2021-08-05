@@ -1,0 +1,185 @@
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.background{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: -1px;
+    top: -1px;
+}
+
+.hero{
+    width: 37%;
+}
+
+.mobile-hero{
+    position: absolute;
+    visibility: collapse;
+}
+
+.shape{
+    width: 63%;
+}
+
+.main{
+    margin-top: 50px;
+    margin-left: 150px;
+    display: grid;
+}
+
+.hello-text{
+    color: hsl(0, 6%, 24%);
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 12vh;
+    letter-spacing: 10px;
+}
+
+#hello-text-start{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.main-text{
+    margin-top: 30px;
+    color: hsl(0, 36%, 70%);
+    width: 400px;
+    font-size: 16px;
+    line-height: 30px
+}
+
+form{
+    margin-top: 30px;
+    position: relative;
+}
+
+input{
+    background-color: transparent;
+    border: 1px solid  hsl(0, 36%, 70%);
+    border-radius: 50px;
+    padding: 16px;
+    width: 350px;
+    font-size: 16px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 100;
+}
+
+input:focus{
+    box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+    outline: none;
+    color: black;
+}
+
+input::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+form.error input{
+    border: 2px solid hsl(0, 93%, 70%)
+}
+
+button{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 284px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-image: none;
+    background-color: hsl(0, 93%, 89%);
+    box-shadow: 1px 1px 10px hsl(0, 10%, 61%);
+}
+
+.error-icon{
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 250px;
+}
+
+form.error .error-icon{
+    display: block;
+}
+
+.error-message{
+    color: hsl(0, 93%, 70%);
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+form.error .error-message{
+    display: block;
+}
+
+@media (max-width: 1300px) {
+    .hero{
+        width: 40%;
+    }
+
+    .shape{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .background{
+        flex-direction: column;
+    }
+
+    .hero{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .mobile-hero {
+        visibility: visible;
+        position: relative;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+    }
+
+    .shape{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+    }
+
+    .main{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-items: center;
+        display: grid;
+    }
+    
+    .logo{
+        justify-self: start;
+        margin-right: 200px;
+    }
+
+    .hello-text{
+        text-align: center;
+        margin-top: 300px;  
+    }
+
+    .main-text{
+        text-align: center;
+    }
+}
+
+
